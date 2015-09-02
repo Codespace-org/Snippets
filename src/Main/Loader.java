@@ -9,11 +9,11 @@ import javafx.stage.Stage;
 /**
  * Author:              Aaron Knight
  * Date:                Aug 30 2015
- * Date Last Modified:  Aug 30 2015
+ * Date Last Modified:  September 02 2015
  * Application Name:    Snippets
- * Dependicies:         ElementaryLanguage.java
- * Description:         Display common syntax for various operations
- *                      through different languages
+ *
+ * Description:         The loader will create the mainStage for the
+ *                      the application.
  * Version:             0.1
  *******************************************************************/
 public class Loader extends Application{
@@ -32,12 +32,6 @@ public class Loader extends Application{
         mainStage.setResizable(false);
         mainStage.show();                               // Show containers within mainStage
     }
-
-
-
-
-
-
 
     public static void main(String[] args){
         Application.launch(args);

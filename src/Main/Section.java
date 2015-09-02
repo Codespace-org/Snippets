@@ -7,10 +7,16 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-
 /**
- * Created by Nukeboy666 on 8/31/2015.
- */
+ * Author:              Aaron Knight
+ * Date:                Aug 30 2015
+ * Date Last Modified:  September 02 2015
+ * Application Name:    Snippets
+
+ * Description:         Display common syntax for various operations
+ *                      through different languages
+ * Version:             0.1
+ *******************************************************************/
 public abstract class Section {
 
     private static Stage languageStage = null;
