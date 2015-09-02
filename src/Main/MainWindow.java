@@ -8,8 +8,17 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
 /**
- * Created by Nukeboy666 on 9/1/2015.
- */
+ * Author:              Aaron Knight
+ * Date:                Aug 30 2015
+ * Date Last Modified:  September 02 2015
+ * Application Name:    Snippets
+
+ * Description:         This class will display the mainWindow called
+ *                      from the loader.
+ *                      This class will also create the menu bar for the
+ *                      application
+ * Version:             0.1
+ *******************************************************************/
 public class MainWindow {
 
     /*******************************************************************
@@ -22,8 +31,8 @@ public class MainWindow {
 
         BorderPane root = new BorderPane();
 
-        Menu file = displayFile();                      // Return file option
-        Menu language = displayLanguage();
+        Menu file = createMenu.displayFile();                      // Return file option
+        Menu language = createMenu.displayLanguage();
         // Menu help = new Menu();
 
         VBox topContainer = new VBox();                 // Create topContainer to hold root
@@ -39,68 +48,5 @@ public class MainWindow {
         root.setTop(topContainer);                      // Add conatiner to root pane
 
         return root;                                    // return root pane to caller
-    }
-
-    /*******************************************************************
-     * Pre:   Empty menu bar slot
-     * Post:  Completed File menu list
-     * @return - Complete file menu back to the menu bar
-     *******************************************************************/
-
-    private static Menu displayFile() {
-
-        Menu fileOption = new Menu("File");
-        MenuItem newOption = new MenuItem("New");
-        MenuItem openOption = new MenuItem("Open");
-        MenuItem saveOption = new MenuItem("Save");
-        MenuItem saveAsOption = new MenuItem("Save As...");
-        MenuItem closeOption = new MenuItem("Close");
-        closeOption.setOnAction(e->System.exit(0));
-
-        fileOption.getItems().addAll(newOption, openOption, saveOption, saveAsOption, closeOption);
-        return fileOption;
-    }
-
-    /*******************************************************************
-     * Pre:     Empty menu bar slot
-     * Post:    Complete language menu list
-     * @return - complete language menu option for the menu bar
-     *******************************************************************/
-
-    private static Menu displayLanguage() {
-
-        Menu languageOption = new Menu("Language");                     // Create Language option
-
-        Menu javaOption = new Menu("Java");                             // Create Java option
-        final ToggleGroup tgJavaMenu = new ToggleGroup();               // Create toggle group for java options
-
-        RadioMenuItem elementary = new RadioMenuItem("Elementary");     // Create new Java option
-        elementary.setToggleGroup(tgJavaMenu);                          // Add option to Java toggle group
-
-        //Process selected elementary toggle
-        elementary.setOnAction(e -> {
-            ElementaryLanguage el = new ElementaryLanguage();
-            el.run();
-        });
-
-        RadioMenuItem common = new RadioMenuItem("Common");             //
-        common.setToggleGroup(tgJavaMenu);
-        common.setOnAction(e -> {
-            CommonLanguage cl = new CommonLanguage();
-            cl.run();
-
-        });
-
-        RadioMenuItem structure = new RadioMenuItem("Structures");      //
-        structure.setToggleGroup(tgJavaMenu);
-        structure.setOnAction(e ->{
-            StructureLanguage sl = new StructureLanguage();
-            sl.run();
-
-        });
-
-        javaOption.getItems().addAll(elementary,common,structure);      // Add options to java Menu
-        languageOption.getItems().add(javaOption);                      // Add javOption to Language menu
-        return languageOption;                                          // Return language option to menuBar
     }
 }
