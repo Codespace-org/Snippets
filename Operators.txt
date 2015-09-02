@@ -1,0 +1,13 @@
+
+Boolean Operators
+
+!     Not operator
+<    Less Than
+>    Greater Than
+|| 	Or
+&&  And
+
+Object Operators
+
+. 		Dot 
+new 		Instanstiation Operator
