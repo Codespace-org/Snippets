@@ -94,7 +94,7 @@ public class CommonLanguage extends Section{
 
         return languageBP;
     }
-    /******/
+    /******//********/
     @Override
     public void run(){
         super.setTa(new TextArea());                                        //Set ta area to new
