@@ -1,0 +1,2 @@
+# Snippets
+Basic JavaFX Application
