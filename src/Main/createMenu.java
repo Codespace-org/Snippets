@@ -6,8 +6,14 @@ import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.ToggleGroup;
 
 /**
- * Created by Nukeboy666 on 9/2/2015.
- */
+ * Author:              Aaron Knight
+ * Date:                Aug 30 2015
+ * Date Last Modified:  September 03 2015
+ * Application Name:    Snippets
+
+ * Description:
+ * Version:             0.1
+ *******************************************************************/
 public class createMenu {
 
     /*******************************************************************
@@ -24,7 +30,7 @@ public class createMenu {
         MenuItem saveOption = new MenuItem("Save");
         MenuItem saveAsOption = new MenuItem("Save As...");
         MenuItem closeOption = new MenuItem("Close");
-        closeOption.setOnAction(e->System.exit(0));
+        closeOption.setOnAction(e -> System.exit(0));
 
         fileOption.getItems().addAll(newOption, openOption, saveOption, saveAsOption, closeOption);
         return fileOption;
@@ -70,6 +76,27 @@ public class createMenu {
 
         javaOption.getItems().addAll(elementary, common, structure);      // Add options to java Menu
         languageOption.getItems().add(javaOption);                      // Add javOption to Language menu
+
+
         return languageOption;                                          // Return language option to menuBar
+    }
+
+    /*******************************************************************
+     * Pre:     Empty menu bar slot
+     * Post:    Complete help menu list
+     * @return - complete help menu option for the menu bar
+     *******************************************************************/
+
+    public static Menu displayHelp() {
+
+        Menu helpOption = new Menu("Help");
+
+        MenuItem hOption = new MenuItem("Help");
+        MenuItem aboutOption = new MenuItem("About");
+        MenuItem versionOption = new MenuItem("Version");
+
+        helpOption.getItems().addAll(hOption,aboutOption,versionOption);
+
+        return helpOption;
     }
 }
