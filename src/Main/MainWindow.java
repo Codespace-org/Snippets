@@ -19,7 +19,7 @@ import javafx.scene.layout.VBox;
  *******************************************************************/
 public class MainWindow {
 
-    /*******************************************************************
+    /********************************************************************
      * pre:     call from loader
      * post:    return border pane containing the initial window
      *
